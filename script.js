@@ -28,6 +28,15 @@ function createGrid(userInput) {
     }
 }
 
+function hover() {
+    // hover and change color (add a new division and change)
+    document.querySelectorAll(".pixel-box").forEach(box => {
+        box.addEventListener("mouseover", () => {
+            box.style.backgroundColor = "black";
+        });
+    });
+}
+
 // select button
 const resetButton = document.querySelector(".reset");
 document.addEventListener("click", () => {
@@ -41,16 +50,6 @@ document.addEventListener("click", () => {
     createGrid(userInput);
     hover();
 })
-
-function hover() {
-    // hover and change color (add a new division and change)
-    document.querySelectorAll(".pixel-box").forEach(box => {
-        box.addEventListener("mouseover", () => {
-            box.style.backgroundColor = "black";
-        });
-    });
-}
-
 
 // initial setup 
 createGrid(16);
