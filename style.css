@@ -1,0 +1,7 @@
+* {
+    /* border: 1px solid red; */
+}
+
+.square-div-container {
+    display: flex;
+}
