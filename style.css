@@ -1,7 +1,15 @@
 * {
     /* border: 1px solid red; */
+    box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+}
+
+.reset {
+    padding: 12px 24px;
+    margin: 12px;
+    font-size: 16px;
+    border-radius: 8px;
 }
 
 .container {
@@ -9,7 +17,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 8px;
 }
 
 .grid-container {

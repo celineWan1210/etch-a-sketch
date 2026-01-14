@@ -17,7 +17,7 @@ function createGrid(userInput) {
         for (let j = 0; j < userInput; j++) {
             const squareDiv = document.createElement("div");
             squareDiv.classList.add("pixel-box");
-            const desired_width = 960 / userInput;
+            const desired_width = 760 / userInput;
             
             // fit to desired size
             squareDiv.style.width = desired_width + "px";
