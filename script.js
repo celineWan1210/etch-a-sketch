@@ -67,6 +67,28 @@ randomizeButton.addEventListener("click", () => {
         randomColorHover();
 });
 
+// progressively darken effect
+function darkenHover() {
+    let i = 0;
+    document.querySelectorAll(".pixel-box").forEach(box => {
+        box.addEventListener("mouseover", () => {
+            if (i <= 10) {
+                i += 1
+            } else {
+                i = 0;
+            };
+
+            box.style.backgroundColor = "black";
+            let opacityValue = i / 10;
+            box.style.opacity = opacityValue.toString();
+        });
+    });
+}
+
+const darkenButton = document.querySelector(".darken");
+darkenButton.addEventListener("click", () => {
+    darkenHover();
+})
 
 
 // initial setup 
