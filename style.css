@@ -1,11 +1,11 @@
 * {
-    /* border: 1px solid red; */
+    border: 1px solid red;
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
 }
 
-.reset {
+button {
     padding: 12px 24px;
     margin: 12px;
     font-size: 16px;
@@ -29,4 +29,11 @@
 
 .pixel-box {
     border: 1px solid black;
+}
+
+.button-set {
+    display: flex;
+    
+    align-items: center;
+    gap: 16px;
 }

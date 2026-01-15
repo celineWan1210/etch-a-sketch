@@ -28,20 +28,20 @@ function createGrid(userInput) {
     }
 }
 
-function hover() {
+function hover(color = "black") {
     // hover and change color (add a new division and change)
     document.querySelectorAll(".pixel-box").forEach(box => {
         box.addEventListener("mouseover", () => {
-            box.style.backgroundColor = "black";
+            box.style.backgroundColor = color;
         });
     });
 }
 
 // select button
 const resetButton = document.querySelector(".reset");
-document.addEventListener("click", () => {
+resetButton.addEventListener("click", () => {
     do {
-        userInput = prompt("Enter number of square per side (1 - 100)");
+        userInput = prompt("Enter number of square per side (1 - 100)", 16);
         userInput = Number(userInput);
     } while (userInput > 100 || userInput < 0);
 
@@ -49,7 +49,25 @@ document.addEventListener("click", () => {
     squareDivContainer.remove();
     createGrid(userInput);
     hover();
-})
+});
+
+// random color hover
+function randomColorHover(){
+    document.querySelectorAll(".pixel-box").forEach(box => {
+        box.addEventListener("mouseover", () => {
+            const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+            box.style.backgroundColor = randomColor;
+        });
+    });
+}
+
+// call the random hover
+const randomizeButton = document.querySelector(".random-color");
+randomizeButton.addEventListener("click", () => {
+        randomColorHover();
+});
+
+
 
 // initial setup 
 createGrid(16);
